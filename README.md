@@ -2,27 +2,34 @@
 
 A retro-style browser game where you play soccer as a slime! Built with Three.js and modern JavaScript.
 
+🎮 [Play the Game](https://jaredmullane.github.io/cursor-slime/)
+
+![Slime Soccer Screenshot](screenshot.png)
+
 ## Features
 
 - Single player gameplay against AI
 - Choose between Red and Blue slime characters
 - Retro-style graphics with neon effects
 - Mystery box power-up that spawns multiple balls
-- Score tracking and win conditions
+- Score tracking and win conditions (first to 10 points wins!)
 - Responsive controls with keyboard input
 
-## Controls
+## How to Play
 
-- Arrow keys: Move your slime left/right
-- Space: Jump
-- First to 10 points wins!
+1. Visit [https://jaredmullane.github.io/cursor-slime/](https://jaredmullane.github.io/cursor-slime/)
+2. Choose your slime character (Red or Blue)
+3. Use the following controls:
+   - Arrow Keys: Move left/right
+   - Space: Jump
+   - First to 10 points wins!
 
-## Setup
+## Local Development
 
 1. Clone the repository:
 ```bash
-git clone [your-repo-url]
-cd slime-soccer
+git clone https://github.com/jaredmullane/cursor-slime.git
+cd cursor-slime
 ```
 
 2. Install dependencies:
@@ -39,10 +46,14 @@ npm start
 
 ## Technologies Used
 
-- Three.js for 3D graphics
+- Three.js for 3D graphics and physics
 - Vite for development and building
 - Modern JavaScript (ES6+)
 - CSS3 for styling and animations
+
+## Contributing
+
+Feel free to submit issues and enhancement requests!
 
 ## License
 
