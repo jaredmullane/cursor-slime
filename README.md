@@ -4,7 +4,7 @@ A retro-style browser game where you play soccer as a slime! Built with Three.js
 
 🎮 [Play the Game](https://jaredmullane.github.io/cursor-slime/)
 
-![Slime Soccer Game - A retro-style 3D soccer game with slime characters](./screenshot.png)
+![Slime Soccer Game - A retro-style 3D soccer game with slime characters](https://raw.githubusercontent.com/jaredmullane/cursor-slime/main/screenshot.png)
 
 ## Features
 
