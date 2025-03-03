@@ -1,16 +1,17 @@
 {
   "name": "slime-soccer",
+  "private": true,
   "version": "1.0.0",
-  "description": "A 3D soccer game with a slime blob character",
-  "main": "index.html",
+  "type": "module",
   "scripts": {
     "start": "vite",
-    "build": "vite build"
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "dependencies": {
-    "three": "^0.162.0"
+    "three": "^0.160.0"
   },
   "devDependencies": {
-    "vite": "^5.1.4"
+    "vite": "^5.0.8"
   }
 } 
