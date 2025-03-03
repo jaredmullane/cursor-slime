@@ -1,0 +1,241 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    font-family: 'Press Start 2P', cursive;
+    background-color: #000033;
+    color: #ffffff;
+}
+
+@keyframes neon-flicker {
+    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+        text-shadow: 
+            -0.2rem -0.2rem 1rem #fff,
+            0.2rem 0.2rem 1rem #fff,
+            0 0 2rem #f40,
+            0 0 4rem #f40,
+            0 0 6rem #f40,
+            0 0 8rem #f40,
+            0 0 10rem #f40;
+    }
+    20%, 24%, 55% {
+        text-shadow: none;
+    }
+}
+
+@keyframes neon-pulse {
+    0% {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #00ff00;
+    }
+    100% {
+        text-shadow: 0 0 20px #fff, 0 0 30px #00ff00, 0 0 40px #00ff00, 0 0 50px #00ff00;
+    }
+}
+
+.menu-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, #000033 0%, #000066 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.menu-content {
+    background-color: rgba(0, 0, 51, 0.9);
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    border: 2px solid #00ff00;
+    box-shadow: 0 0 20px #00ff00;
+}
+
+.title-container {
+    margin-bottom: 40px;
+}
+
+.game-title {
+    font-size: 48px;
+    color: #fff;
+    text-transform: uppercase;
+    animation: neon-flicker 1.5s infinite alternate;
+    margin-bottom: 20px;
+}
+
+.controls-container {
+    margin-bottom: 30px;
+    padding: 15px;
+    border: 2px solid #00ffff;
+    border-radius: 5px;
+    background-color: rgba(0, 255, 255, 0.1);
+}
+
+.control-instructions {
+    margin-top: 15px;
+}
+
+.control-instructions p {
+    color: #00ffff;
+    font-size: 14px;
+    margin: 10px 0;
+    text-shadow: 0 0 5px #00ffff;
+    letter-spacing: 2px;
+}
+
+.retro-text {
+    color: #00ff00;
+    text-shadow: 0 0 5px #00ff00;
+    margin: 20px 0;
+    font-size: 20px;
+}
+
+.character-options {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.neon-btn {
+    font-family: 'Press Start 2P', cursive;
+    padding: 15px 30px;
+    font-size: 16px;
+    border: 2px solid;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-transform: uppercase;
+    animation: neon-pulse 1.5s infinite alternate;
+}
+
+.character-btn {
+    width: 200px;
+    margin: 10px;
+}
+
+#red-slime {
+    background-color: #330000;
+    color: #ff0000;
+    border-color: #ff0000;
+    text-shadow: 0 0 5px #ff0000;
+}
+
+#red-slime:hover {
+    background-color: #ff0000;
+    color: #ffffff;
+    box-shadow: 0 0 10px #ff0000;
+}
+
+#blue-slime {
+    background-color: #000033;
+    color: #00ffff;
+    border-color: #00ffff;
+    text-shadow: 0 0 5px #00ffff;
+}
+
+#blue-slime:hover {
+    background-color: #00ffff;
+    color: #ffffff;
+    box-shadow: 0 0 10px #00ffff;
+}
+
+.character-btn.selected {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px;
+}
+
+.start-btn {
+    background-color: #003300;
+    color: #00ff00;
+    border-color: #00ff00;
+    margin-top: 30px;
+}
+
+.start-btn:disabled {
+    background-color: #111;
+    color: #444;
+    border-color: #444;
+    cursor: not-allowed;
+    animation: none;
+}
+
+.start-btn:hover:not(:disabled) {
+    background-color: #00ff00;
+    color: #000000;
+    box-shadow: 0 0 20px #00ff00;
+}
+
+#scoreboard {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #00ff00;
+    font-size: 32px;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px 40px;
+    border-radius: 5px;
+    border: 2px solid #00ff00;
+    text-shadow: 0 0 5px #00ff00;
+}
+
+.red-score {
+    color: #ff0000;
+    text-shadow: 0 0 5px #ff0000;
+    margin: 0 10px;
+}
+
+.blue-score {
+    color: #00ffff;
+    text-shadow: 0 0 5px #00ffff;
+    margin: 0 10px;
+}
+
+#game-over {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 51, 0.9) 0%, rgba(0, 0, 102, 0.9) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.game-over-content {
+    background-color: rgba(0, 0, 51, 0.9);
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    border: 2px solid #ff0000;
+    box-shadow: 0 0 20px #ff0000;
+}
+
+.hidden {
+    display: none;
+}
+
+#play-again {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+#play-again:hover {
+    background-color: #45a049;
+} 

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slime Soccer</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <style>
+        .hidden {
+            display: none !important;
+        }
+    </style>
+</head>
+<body>
+    <div id="character-select" class="menu-screen">
+        <div class="menu-content">
+            <div class="title-container">
+                <h1 class="game-title">SLIME SOCCER</h1>
+                <div class="neon-flicker"></div>
+            </div>
+            <div class="controls-container">
+                <h3 class="retro-text">CONTROLS</h3>
+                <div class="control-instructions">
+                    <p>ARROW KEYS TO MOVE</p>
+                    <p>SPACE TO JUMP</p>
+                </div>
+            </div>
+            <h2 class="retro-text">Choose Your Slime</h2>
+            <div class="character-options">
+                <button id="red-slime" class="character-btn neon-btn">
+                    Red Slime
+                </button>
+                <button id="blue-slime" class="character-btn neon-btn">
+                    Blue Slime
+                </button>
+            </div>
+            <button id="start-game" class="start-btn neon-btn" disabled>Press Start</button>
+        </div>
+    </div>
+    <div id="scoreboard" class="hidden">
+        <span class="red-score">0</span> - <span class="blue-score">0</span>
+    </div>
+    <div id="game-over" class="hidden" style="display: none;">
+        <div class="game-over-content">
+            <h2 class="retro-text">Game Over!</h2>
+            <p class="winner-text retro-text"></p>
+            <button id="play-again" class="neon-btn">Continue? (10)</button>
+        </div>
+    </div>
+    <script type="module" src="game.js"></script>
+</body>
+</html> 
