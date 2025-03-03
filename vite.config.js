@@ -1,5 +1,5 @@
 export default {
-  base: './',
+  base: '/cursor-slime/',
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
